@@ -1,0 +1,825 @@
+html {
+    scroll-behavior: smooth;
+    word-wrap:break-word;
+    border-collapse: collapse;
+}
+.page {
+    /* max-width: 1920px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #F899A1;
+    min-height: 200vh;
+}
+#tlo {
+    height: 100vh;
+    width: 100%;
+    left: 0px;
+    position: fixed;
+    z-index:-1;
+    opacity: 10%;
+}
+
+@media screen and (max-width: 500px){
+    #tlo {
+        height: 0vh;
+        width: 0vw;
+    } 
+}
+.cat-photo {
+    position: fixed;
+    top: -5%;
+    left: 50%;
+    z-index: 11;
+    
+}
+/* Navigation section */
+#navigation {
+	background-color: #000000;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+	/*padding: 20px 40px;*/
+	width: 60%;
+	left: 20%;
+	border-radius: 80px;
+	top: 30px;
+	position: fixed;
+	z-index: 10;
+}
+
+#navigation li {
+	padding: 0 17px;
+    font-size: 19px;
+}
+
+#navigation li a {
+	color: #fff;
+    font-size: 20px;
+    font-family: 'Fredoka One';
+}
+.navbar-toggler{
+    display:flex;
+}
+.navbar-brand,
+.navbar-brand:hover {
+    color: #fff;
+    font-weight: bold;
+}
+
+.usunKlase {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-bars{
+    color: white;
+}
+.fa-twitter{
+    color: #1D9BF0;
+}
+.fa-discord {
+    color: #7289DB;
+}
+.faq {
+    float: right;
+}
+
+
+@media screen and (min-width: 2000px) {
+    
+    .cat-photo{
+        width: 150px;
+        height: 150px;
+        left: 50%;
+        top: -1%;
+    }
+}
+
+@media screen and (max-width: 1750px) {
+    
+    .cat-photo{
+        width: 190px;
+        height: 190px;
+        left: 50%;
+        top: -3%;
+    }
+    #navigation li a {
+        font-size: 17px;
+        
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    
+    .cat-photo{
+        width: 0px;
+        height: 0px;
+    }
+    #navigation li a {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    
+    .cat-photo{
+        width: 0px;
+        height: 0px;
+    }
+    #navigation li a {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 500px){
+    .cat-photo{
+        width: 0px;
+        height: 0px;
+    }
+    #navigation{
+        border-radius: 0px;
+        top: 0px;
+        left: 0%;
+        padding: 0;
+        width: 100vw;
+        
+    }
+    
+    
+    
+}
+
+/* End of Navigation section */
+
+#png-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7vh;
+    padding-bottom: 0vh;
+}
+
+.main-cat-photo{
+    width: 9000px;
+    height: 600px;
+}
+
+@media screen and (max-width: 1750px) {
+    
+    .main-cat-photo {
+        width: 700px;
+        height: 650px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    
+    .main-cat-photo {
+        width: 700px;
+        height: 600px;
+    }
+}
+#About, #Team {
+    padding-top: 13vh;
+    max-width: 1920px;
+}
+#Roadmap {
+    max-width: 1920px;
+}
+@media screen and (max-width: 500px){
+    .main-cat-photo {
+        width: 100%;
+        height: 40vh;
+    }
+    
+    #Team, #Roadmap {
+        padding-top: 3vh;
+    }
+    #About {
+        padding-top: 0;
+    }
+}
+
+
+
+#btn-twitter, #btn-discord {
+    width: 250px;
+    height: 80px;
+    border-radius: 140px;
+    font-family: 'Fredoka One';
+    font-size: 25px;
+    color: white;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+    border: none;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+#btn-twitter:hover, #btn-discord:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0.7;
+}
+#btn-twitter{
+    background-color: #1D9BF0;
+    
+}
+#btn-discord{
+    background-color: #7289DB;
+}
+/* ?????????? */
+.buttony {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 500px) {
+    
+    #btn-twitter, #btn-discord {
+        width: 180px;
+        height: 50px;
+        font-size: 18px;
+    }
+}
+
+.About h1, .roadmap-title, .team-title, .faq-title{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 50px 50px 50px 50px;
+    font-size: 60px;
+    font-family: 'Fredoka One';
+    color: white;
+    text-shadow: 2px 2px #60f7ff;
+    text-align : center;
+}
+
+.reveal {
+    position: relative;
+    opacity: 0;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+  }
+  .active.fade-bottom {
+    animation: fade-bottom 0.8s ease-in;
+  }
+  .active.fade-left {
+    animation: fade-left 0.8s ease-in;
+  }
+  .active.fade-right {
+    animation: fade-right 0.8s ease-in;
+  }
+  @keyframes fade-bottom {
+    0% {
+      transform: translateY(0px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-left {
+    0% {
+      transform: translateX(0px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-right {
+    0% {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+
+.faq-title {
+    padding-top: 100px;
+}
+
+.About-text {
+    
+    justify-content: center; 
+    align-items: center; 
+    margin: 70px 70px 70px 70px;
+    font-size: 40px;
+    text-align : center;
+    font-family: 'Montserrat', sans-serif;
+    /*color: white;*/
+}
+
+
+@media screen and (max-width: 500px) {
+    
+    .About h1, .roadmap-title, .team-title, .faq-title{
+        font-size: 35px;
+        text-align : center;
+    }
+    .About-text{
+        font-size: 20px;
+        margin: 0;
+    }
+}
+
+#gallery img{
+    height: 254px;
+    width: 100px;
+}
+/* --------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.container-cats{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    /* max-width: 1920px; */
+}
+.container-cats img{
+    width: 220px;
+    height: 220px;
+    
+}
+.img1, .img2,  .img3, .img4{
+    margin: 40px;
+}
+
+@media screen and (max-width: 1000px) {
+    
+    .container-cats img{
+        width: 254px;
+        height: 254px;
+    }
+
+}
+@media screen and (max-width: 500px) {
+    .img1, .img2,  .img3, .img4{
+        margin: 20px;
+    }
+    .container-cats img{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@keyframes floatUp {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+@keyframes floatDown {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(-20px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(0px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(-20px);
+	}
+}
+
+.img1, .img3 { 
+    overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: floatUp 4s ease-in-out infinite;
+    border-radius: 20%;
+    border: 5px rgb(0, 0, 0) solid;
+}
+.img2, .img4 { 
+    overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: floatDown 4s ease-in-out infinite;
+    border-radius: 20%;
+    border: 5px rgb(0, 0, 0) solid;
+}
+
+@media screen and (max-width: 500px) {
+    .img1, .img2, .img3, .img4 {
+        animation: floatUp 4s ease-in-out infinite;
+    }
+    
+}
+
+.czapka-kartka-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+
+}
+#czapka-kartka {
+    width: 800px;
+    height: 239px;
+}
+
+/*Klasa roadmap-title razem z About h1 */
+
+.roadmap-title {
+    padding-bottom: 150px;
+}
+#roadmap-image{
+    width: 1400px;
+    height: 1349px;
+    position: relative;
+}
+#glowa1, #glowa2, #glowa3, #glowa4 {
+    position: absolute;
+    width: 300px;
+}
+#glowa1, #glowa3 {
+    transform: rotate(30deg);
+}
+#glowa2, #glowa4 {
+    transform: rotate(330deg);
+}
+#glowa1 {
+    top: -11%;
+    right: 23%;
+    
+}
+#glowa2 {
+    left: 20%;
+    top: 26%;
+}
+#glowa3 {
+    top: 47%;
+    right: 20%;
+    
+}
+#glowa4 {
+    left: 20%;
+    top: 78%;
+}
+#glowa1:hover, #glowa3:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake13 0.5s; 
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite; 
+  }
+  
+  @keyframes shake24 {
+    0% { transform: translate(1px, 1px) rotate(330deg); }
+    10% { transform: translate(-1px, -2px) rotate(329deg); }
+    20% { transform: translate(-3px, 0px) rotate(331deg); }
+    30% { transform: translate(3px, 2px) rotate(330deg); }
+    40% { transform: translate(1px, -1px) rotate(331deg); }
+    50% { transform: translate(-1px, 2px) rotate(329deg); }
+    60% { transform: translate(-3px, 1px) rotate(330deg); }
+    70% { transform: translate(3px, 1px) rotate(329deg); }
+    80% { transform: translate(-1px, -1px) rotate(331deg); }
+    90% { transform: translate(1px, 2px) rotate(330deg); }
+    100% { transform: translate(1px, -2px) rotate(329deg); }
+  }
+  #glowa2:hover, #glowa4:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake24 0.5s; 
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite; 
+  }
+  
+  @keyframes shake13 {
+    0% { transform: translate(1px, 1px) rotate(30deg); }
+    10% { transform: translate(-1px, -2px) rotate(29deg); }
+    20% { transform: translate(-3px, 0px) rotate(31deg); }
+    30% { transform: translate(3px, 2px) rotate(30deg); }
+    40% { transform: translate(1px, -1px) rotate(31deg); }
+    50% { transform: translate(-1px, 2px) rotate(29deg); }
+    60% { transform: translate(-3px, 1px) rotate(30deg); }
+    70% { transform: translate(3px, 1px) rotate(29deg); }
+    80% { transform: translate(-1px, -1px) rotate(31deg); }
+    90% { transform: translate(1px, 2px) rotate(30deg); }
+    100% { transform: translate(1px, -2px) rotate(29deg); }
+  }
+@media screen and (max-width: 1750px) {
+    
+    #glowa1, #glowa2, #glowa3, #glowa4 {
+        width: 270px;
+    }
+    #glowa1, #glowa3 {
+        right: 20%;
+    }
+    #glowa2, #glowa4 {
+        left: 20%;
+    }
+    #glowa2 {
+        top: 28%;
+    }
+
+}
+@media screen and (max-width: 1400px) {
+    
+    #glowa1, #glowa2, #glowa3, #glowa4 {
+        width: 230px;
+    }
+    #glowa1 {
+        top: -13%;
+        right: 18%;
+    }
+    
+    #glowa2, #glowa4 {
+        left: 15%;
+    }
+    
+    #glowa2 {
+        top: 24%;
+    }
+    #glowa3 {
+        right: 14%;
+    }
+    #glowa4{
+        top: 75%;
+    }
+
+}
+@media screen and (max-width: 1000px) {
+    #glowa1, #glowa2, #glowa3, #glowa4 {
+        width: 150px;
+    }
+    #glowa1, #glowa3 {
+        right: 23%;
+    }
+    #glowa1 {
+        top: -12%;
+    }
+    #glowa2, #glowa4 {
+        left: 22%;
+    }
+    #glowa2 {
+        top: 28%;
+    }
+    #glowa3{
+        top: 47%;
+    }
+}
+@media screen and (max-width: 800px) {
+    #glowa1, #glowa2, #glowa3, #glowa4 {
+        width: 140px;
+    }
+    #glowa1 {
+        top: -14%;
+        right: 20%;
+    }
+    #glowa2, #glowa4 {
+        left: 20%;
+    }
+    #glowa2 {
+        top:20%;
+    }
+    #glowa3{
+        right: 18%;
+    }
+    
+
+}
+@media screen and (max-width: 500px) {
+    #glowa1, #glowa2, #glowa3, #glowa4 {
+        width: 80px;
+    }
+    #glowa1, #glowa3 {
+        right: 15%;
+    }
+    #glowa2, #glowa4 {
+        left: 13%;
+    }
+    
+}
+
+/* SAME KOTY - CALE ZDJECIE 
+#roadmap-same-koty-img{
+    position: absolute;
+    width: 1400px;
+    height: 1349px;
+    
+}
+*/
+.roadmap-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+.left-text, .right-text, .left-text-two, .right-text-two, .left-text-three {
+    color: white;
+    font-size: 30px;
+    font-family: 'Fredoka One';
+    position: absolute;
+}
+
+.left-text{
+    top: 0%;
+    left: 15%;
+}
+
+.right-text{
+    top: 20%;
+    right: 13%;
+}
+
+.left-text-two{
+    top: 50%;
+    left: 15%;
+}
+.right-text-two {
+    top: 70%;
+    right: 12%;
+}
+.left-text-three{
+    top: 100%;
+    left: 15%;
+}
+@media screen and (max-width: 1750px) {
+    
+    #roadmap-image {
+        width: 1200px;
+        height: 1264px;
+    }
+    .left-text, .right-text, .left-text-two, .right-text-two, .left-text-three{
+        font-size: 24px;
+    }
+    
+}
+@media screen and (max-width: 1400px) {
+    
+    #roadmap-image {
+        width: 1000px;
+        height: 989px;
+    }
+    .left-text, .right-text, .left-text-two, .right-text-two, .left-text-three{
+        font-size: 19px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    
+    #roadmap-image {
+        width: 850px;
+        height: 895px;
+    }
+    .left-text, .right-text, .left-text-two, .right-text-two, .left-text-three{
+        font-size: 16px;
+    }
+    #czapka-kartka {
+        width: 700px;
+        height: 209px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    
+    #roadmap-image {
+        width: 750px;
+        height: 757px;
+    }
+    .left-text, .right-text, .left-text-two, .right-text-two, .left-text-three{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 850px) {
+    
+    #roadmap-image {
+        width: 650px;
+        height: 619px;
+    }
+    .left-text, .right-text, .left-text-two, .right-text-two, .left-text-three{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 500px) {
+    
+    #roadmap-image {
+        width: 370px;
+        height: 301px;
+    }
+    .left-text{
+        font-size: 8px;
+        left: 6%;
+        top: -5%;
+    }
+    .right-text{
+        font-size: 8px;
+        right: 2%;
+        top: 20%;
+    }
+    .left-text-two{
+        font-size: 8px;
+        left: 6%;
+    }
+    .right-text-two{
+        font-size: 8px;
+        right: 0%;
+        top: 73%;
+    }
+    .left-text-three{
+        font-size: 8px;
+        left: 10%;
+        top: 110%;
+    }
+    #czapka-kartka {
+        width: 300px;
+        height: 100px;
+    }
+    .roadmap-title {
+        padding-bottom: 20px;
+    }
+}
+
+.memb img{
+    width: 300px;
+    height: 300px;
+}
+.members{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+    align-content: flex-start;
+    flex-direction: row;
+    
+}
+.memb {
+    width: 35vw;
+}
+
+.name {
+    font-family: 'Montserrat';
+    font-size: 50px;
+}
+.memb1 {
+    color: #F899A1;
+}
+.sm-inf {
+    font-size: 37px;
+    font-family: 'Fredoka One';
+}
+.member-about {
+    font-family: 'Fredoka One';
+    color: white;
+    padding: 40px 35px 40px 35px;
+}
+.paragraph{
+    text-align:justify;
+    font-size: 30px;
+    
+}
+@media screen and (max-width: 1000px) {
+    
+    .memb img{
+        width: 250px;
+        height: 250px;
+    }
+   
+}
+@media screen and (max-width: 500px) {
+    
+    .memb img{
+        width: 150px;
+        height: 150px;
+    }
+    .name {
+        font-size: 17px;
+    }
+    .paragraph {
+        font-size: 7px;
+    }
+    .member-about {
+        
+        padding: 2px 2px 2px 2px;
+    }
+    .sm-inf{
+        font-size: 10px;
+    }
+   
+}
